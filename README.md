@@ -43,15 +43,15 @@ spam_classification/
 conda create -n spam_env python=3.9
 conda activate spam_env
 
-3. **Zainstaluj wymagane biblioteki**:
+3. Zainstaluj wymagane biblioteki:
 pip install -r requirements.txt
 
-4. **Pobierz zasoby NLTK (tylko za pierwszym razem)** :
+4. Pobierz zasoby NLTK (tylko za pierwszym razem) :
 import nltk
 nltk.download('stopwords')
 nltk.download('punkt')
 
-🚀 Uruchomienie projektu
+## 🚀 Uruchomienie projektu
 	1.	Otwórz notebook:
     notebooks/spam_classification.ipynb
 	2.	Uruchom komórki po kolei:
@@ -64,18 +64,18 @@ nltk.download('punkt')
 model, vectorizer = load_model_and_vectorizer()
 print(predict_message("You won a free ticket!", model, vectorizer))  # → Spam
 
-🧪 Przykładowy wynik
+## 🧪 Przykładowy wynik
 Accuracy: 0.981
 Macierz pomyłek:
 [[964   2]
  [ 19 130]]
 
-📦 **Pliki wyjściowe**
+## 📦 Pliki wyjściowe
 Po treningu modelu w katalogu models/ zapisują się:
 	•	spam_classifier_model.joblib – wytrenowany model Naive Bayes
 	•	vectorizer.joblib – wektoryzator (CountVectorizer)
 
-🤖 **Zastosowany algorytm**
+🤖 Zastosowany algorytm
 	•	Naive Bayes Classifier (MultinomialNB) – nadzorowany, probabilistyczny algorytm klasyfikacji
 	•	Zadanie: klasyfikacja binarna (spam = 1, ham = 0)
 	•	Czyszczenie tekstu: lowercase, tokenizacja, usuwanie stopwordów, stemming

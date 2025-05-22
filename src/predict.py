@@ -3,9 +3,6 @@ import re
 
 def load_model_and_vectorizer(model_path='../models/spam_classifier_model.joblib',
                               vectorizer_path='../models/vectorizer.joblib'):
-    """
-    Ładuje zapisany model i vectorizer.
-    """
     model = joblib.load(model_path)
     vectorizer = joblib.load(vectorizer_path)
     return model, vectorizer
